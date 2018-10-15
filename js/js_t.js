@@ -17,11 +17,15 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class Tab extends Component<Props> {
   render() {
+    let value;
+    console.log("render test.......");
+    console.warn("carte test!!!");
+    console.log("<<<<<<<<<<<<<.......>>>>>>>>>>>>>>");
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to carter!</Text>
+        <Text style={styles.welcome}>Welcome to js page again!</Text>
       </View>
     );
   }

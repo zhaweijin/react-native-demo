@@ -7,8 +7,15 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.6.0-alpha.8af6728",
-    "react-native": "0.57.3"
+    "@babel/core": "^7.1.2",
+    "prop-types": "^15.6.0",
+    "pubsub-js": "^1.7.0",
+    "react": "^16.5.0",
+    "react-native": "^0.57.0",
+    "react-native-fs": "^2.11.18",
+    "react-native-root-toast": "^3.0.1",
+    "react-redux": "^5.0.7",
+    "redux": "^2.0.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
