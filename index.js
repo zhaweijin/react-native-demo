@@ -40,10 +40,10 @@ import AutoComplete from './js/network/AutoComplete'
 import WebViewExample from './js/network/WebViewExample'
 import RootWebViewApp from './js/network/RootApp'
 import IconTest from './js/Icon/IconTest'
-//import GetPhoto from './js/camera/GetPhoto'
+import GetPhoto from './js/camera/GetPhoto'
 //import PickerImage from './js/camera/PickImage'
 //import CropImage from './js/camera/CropImage'
 
 
-AppRegistry.registerComponent(appName, () => StackNavigator);
+AppRegistry.registerComponent(appName, () => GetPhoto);
 
