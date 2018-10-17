@@ -14,7 +14,7 @@ export  default class Page1 extends Component {
     constructor(props) {
         super(props);
         // 初始状态
-        //this.onNaviBarPress = this.onNaviBarPress.bind(this);
+        this.onNaviBarPress = this.onNaviBarPress.bind(this);
     }
 
     render() {

@@ -54,19 +54,24 @@ export default class extends Component<Props> {
 
 
     render() {
-        let android_app_icon: {
-            android:'ic_launcher',
-        }
+
         if(this.state.isNativeImage) {
             return (
-                <View style={styles.column_container}>
-                  <Image style={styles.imageBigStyle}
-                         source={ nativeImageSource({
-                           android:'mipmap/ic_launcher',
-                           width: 60,
-                           height:60,
-                         })}/>
-
+                <View style={styles.column_container}>{
+                    Platform.OS === 'android' ?
+                        <Image style={styles.imageBigStyle}
+                               source={ nativeImageSource({
+                                   android: 'mipmap/ic_launcher',
+                                   width: 60,
+                                   height: 60,
+                               })}/>
+                        :<Image style={styles.imageBigStyle}
+                                source={ nativeImageSource({
+                                    ios: 'test',
+                                    width: 60,
+                                    height: 60,
+                                })}/>
+                }
                 </View>
             );
         }else{

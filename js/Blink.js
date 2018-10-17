@@ -43,4 +43,3 @@ class Blink extends Component {
     }
 }
 
-//AppRegistry.registerComponent('BlinkApp', () => BlinkApp);

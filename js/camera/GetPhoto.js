@@ -47,7 +47,7 @@ export default class GetPhoto extends Component {
     //页面的组件渲染完毕（render）之后执行
     componentDidMount() {
         var read_permission = PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE;
-        Api.requestPermission(read_permission);
+        if(Platform.OS==='android') Api.requestPermission(read_permission);
         var _that = this;
         //获取照片
         var promise = CameraRoll.getPhotos(fetchParams)

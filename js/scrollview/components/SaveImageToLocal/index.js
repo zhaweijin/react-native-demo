@@ -10,6 +10,7 @@ import {
     View,
     Image,
     CameraRoll,
+    Platform,
 } from 'react-native';
 
 //网络图片地址
@@ -29,7 +30,7 @@ export default class App extends Component {
 
     constructor(props){
         super(props);
-        Api.requestCameraPermission();
+        if(Platform.OS==='android') Api.requestCameraPermission();
         this._onCallback = this._onCallback.bind(this);
 
     }
@@ -77,14 +78,15 @@ export default class App extends Component {
     saveImg(img) {
 
         console.log("33333");
-        //Api.DownloadImage(img);
+        Api.DownloadImage(img);
 
         //Api.writeFile("carter");
+
 
         //Api.readFile();
 
 
-        Api.Toast("toast test");
+        Api.toast("toast test");
     }
 }
 

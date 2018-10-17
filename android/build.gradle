@@ -9,8 +9,15 @@ buildscript {
         supportLibVersion = "27.1.1"
     }
     repositories {
+        mavenLocal()
+        maven { url "https://jitpack.io" }
         jcenter()
-        google()
+        maven { url "https://maven.google.com/"}
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven {
+                    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+                    url "$rootDir/../node_modules/react-native/android"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
@@ -23,12 +30,14 @@ buildscript {
 allprojects {
     repositories {
         mavenLocal()
+        maven { url "https://jitpack.io" }
         jcenter()
+        maven { url "https://maven.google.com/"}
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
         maven {
-            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url "$rootDir/../node_modules/react-native/android"
+                    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+                    url "$rootDir/../node_modules/react-native/android"
         }
-        google()
     }
 }
 

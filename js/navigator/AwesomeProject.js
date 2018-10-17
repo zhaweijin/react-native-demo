@@ -42,5 +42,5 @@ export default class AwesomeProject extends Component {
         );
     }
 }
-//AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+
 

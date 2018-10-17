@@ -12,7 +12,7 @@ import Api from '../common';
 const API = 'https://swapi.co/api';
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
 
-export default class Component07 extends Component {
+export default class AutoComplete extends Component {
     static renderFilm(film) {
         const {title, director, opening_crawl, episode_id} = film;
         const roman = episode_id < ROMAN.length ? ROMAN[episode_id] : episode_id;
@@ -51,7 +51,7 @@ export default class Component07 extends Component {
              console.log("result====>"+JSON.stringify(jsonData));
         })*/
 
-        this.get();
+
 
     }
  
@@ -96,7 +96,7 @@ export default class Component07 extends Component {
                 />
                 <View style={styles.descriptionContainer}>
                     {films.length > 0 ? (
-                        Component07.renderFilm(films[0])
+                        AutoComplete.renderFilm(films[0])
                     ) : (
                         <Text style={styles.infoText}>
                             输入星球大战电影名称

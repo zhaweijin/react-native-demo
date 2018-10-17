@@ -100,7 +100,7 @@ export default class Component06 extends Component {
                 <ImageViewer
                     imageUrls={images}
                     enableImageZoom={true} // 是否开启手势缩放
-                    saveToLocalByLongPress={true}  //长按拉起保存,不要开启调试模式，不然就变成点击长按了
+                    saveToLocalByLongPress={false}  //长按拉起保存,不要开启调试模式，不然就变成点击长按了
                     //index={curentImage} // 初始显示第几张 0,1,2...
                     //failImageSource={"http://192.168.31.107:80/e.jpg"} // 加载失败图片
                     //loadingRender={this.renderLoad} //加载中显示的view
